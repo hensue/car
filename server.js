@@ -58,11 +58,11 @@ app.use("/api/bookings/", require("./routes/bookingsRoute"));
 
 app.use(express.static("public"))
 
-// app.use(express.static("client/build"));
+app.use(express.static("client/build"));
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-// });
+app.get("*", (req, res) => {
+   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+ });
 
 
 
